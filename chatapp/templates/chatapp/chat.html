@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+</head>
+<body>
+    <h1>Ask a Question</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label>Select Model:</label><br>
+        <input type="radio" name="model_choice" value="1"> Mistral<br>
+        <input type="radio" name="model_choice" value="2"> Llama<br><br>
+        
+        <label>Your Query:</label><br>
+        <input type="text" name="query" required><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+    
+    {% if query and ans %}
+    <h2>Response:</h2>
+    <p>{{ ans }}</p>
+    {% endif %}
+    
+    <h2>Chat History:</h2>
+    <ul>
+        {% for message in chat_history %}
+        <li><strong>Query:</strong> {{ message.query }} <br> <strong>Response:</strong> {{ message.response }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,24 +1,43 @@
+/* Container styling */
 .container {
     display: flex;
-}
-
-.sidebar {
-    width: 200px;
+    height: 100vh;
     background-color: #333;
     color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #444;
     padding: 20px;
-    height: 100vh;
-    box-sizing: border-box;
+    overflow-y: auto;
 }
 
 .sidebar h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.new-session-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    border: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.new-session-button:hover {
+    background-color: #45a049; /* Darker green color on hover */
 }
 
 .sidebar ul {
     list-style-type: none;
-    padding: 0;
+    padding-left: 0;
 }
 
 .sidebar ul li {
@@ -28,79 +47,65 @@
 .sidebar ul li a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
 }
 
 .sidebar ul li a:hover {
     text-decoration: underline;
 }
 
-.new-session-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    font-size: 16px;
-    border-radius: 4px;
-}
-
-.new-session-button:hover {
-    background-color: #45a049;
-}
-
+/* Content styling */
 .content {
-    flex-grow: 1;
+    flex: 1;
     padding: 20px;
-    background-color: #f1f1f1;
-    box-sizing: border-box;
 }
 
-.content h1 {
-    font-size: 24px;
+/* Centered and larger title */
+.title {
+    text-align: center;
+    font-size: 36px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
-.content form {
-    margin-bottom: 20px;
+form label {
+    font-size: 18px;
 }
 
-.content form input[type="text"] {
+form input[type="text"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
 }
 
-.content form input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #4CAF50;
+form input[type="submit"] {
+    background-color: #4CAF50; /* Green color */
     color: white;
+    padding: 10px 20px;
     border: none;
     cursor: pointer;
 }
 
-.content form input[type="submit"]:hover {
-    background-color: #45a049;
+form input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green color on hover */
 }
 
-.content h2 {
-    font-size: 20px;
+/* Chat history styling */
+h2 {
+    font-size: 24px;
     margin-top: 30px;
 }
 
-.content ul {
+ul {
     list-style-type: none;
-    padding: 0;
+    padding-left: 0;
 }
 
-.content ul li {
+ul li {
     margin-bottom: 10px;
     padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    background-color: #555;
+    border-radius: 5px;
 }

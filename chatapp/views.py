@@ -3,12 +3,16 @@ from .mistral import generate_response_mistral
 from .llama import generate_response_llama
 from .mongo import insert_data
 from django.http import JsonResponse
-from pymongo import MongoClient
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
 import os
 import uuid
 
 # MongoDB setup
 uri = "mongodb+srv://sanjayram2134:ram_2134@cluster0.1mxxz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
+
+
 client = MongoClient(uri)
 db = client['mydb1']
 

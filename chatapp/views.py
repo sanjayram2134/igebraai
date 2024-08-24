@@ -13,7 +13,7 @@ import uuid
 load_dotenv()
 # MongoDB setup
 uri = os.getenv('uri')
-# uri = "mongodb+srv://sanjayram2134:ram_2134@cluster0.1mxxz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
 
 
 

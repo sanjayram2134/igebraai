@@ -2,8 +2,14 @@ from transformers import pipeline
 
 from langchain_huggingface import HuggingFaceEndpoint
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+HUGGINGFACEHUB_API_TOKEN = os.getenv('HUGGINGFACEHUB_API_TOKEN')
 # Hugging Face API Token
-HUGGINGFACEHUB_API_TOKEN = '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'
+# HUGGINGFACEHUB_API_TOKEN = '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'
 
 # LLM Configuration
 repo_id = "meta-llama/Meta-Llama-3-8B-Instruct"

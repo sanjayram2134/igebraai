@@ -2,8 +2,12 @@ from transformers import pipeline
 
 from langchain_huggingface import HuggingFaceEndpoint
 import os
-# Hugging Face API Token
-HUGGINGFACEHUB_API_TOKEN = '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'
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+HUGGINGFACEHUB_API_TOKEN = os.getenv('HUGGINGFACEHUB_API_TOKEN')
 
 # LLM Configuration
 repo_id = "mistralai/Mistral-7B-Instruct-v0.2"
